@@ -1,1 +1,704 @@
-https://YOUR-GITHUB-USERNAME.github.io/legacy-communications
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Communications | Professional Network & Telecommunications Installation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    /* Header & Navigation */
+    header {
+        background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%);
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-bottom: 2px solid #d4af37;
+    }
+
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: opacity 0.3s;
+    }
+
+    .nav-links a:hover {
+        opacity: 0.8;
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: #d4af37;
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%);
+        color: white;
+        padding: 120px 2rem 80px;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        animation: fadeInUp 1s ease;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+    }
+
+    .cta-button {
+        background: #d4af37;
+        color: white;
+        padding: 1rem 2.5rem;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        display: inline-block;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    }
+
+    .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    }
+
+    /* Services Section */
+    .services {
+        padding: 80px 2rem;
+        background: #f8f9fa;
+    }
+
+    /* Portfolio Gallery Section */
+    .portfolio {
+        padding: 80px 2rem;
+        background: white;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        cursor: pointer;
+        aspect-ratio: 1;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(30, 60, 114, 0.95), transparent);
+        color: white;
+        padding: 1.5rem;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+        transform: translateY(0);
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.05);
+    }
+
+    .gallery-overlay h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .gallery-overlay p {
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+
+    .image-placeholder {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #1a2940 0%, #0a1628 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .placeholder-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        opacity: 0.8;
+    }
+
+    .placeholder-text {
+        font-size: 1.1rem;
+        font-weight: 500;
+        opacity: 0.9;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: #0a1628;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .service-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    .service-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #1a2940;
+    }
+
+    .service-card h3 {
+        color: #0a1628;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .service-card p {
+        color: #666;
+        line-height: 1.8;
+    }
+
+    /* Why Choose Us Section */
+    .why-choose {
+        padding: 80px 2rem;
+        background: white;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .feature {
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #d4af37;
+    }
+
+    .feature h3 {
+        color: #0a1628;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Contact Section */
+    .contact {
+        padding: 80px 2rem;
+        background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%);
+        color: white;
+    }
+
+    .contact-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .contact-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .contact-item-icon {
+        font-size: 2rem;
+    }
+
+    /* Footer */
+    footer {
+        background: #1a1a1a;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .logo {
+            font-size: 1.2rem;
+        }
+
+        .mobile-menu-toggle {
+            display: block;
+        }
+
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%);
+            flex-direction: column;
+            gap: 0;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links li {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 1rem 2rem;
+        }
+
+        nav {
+            padding: 0 1rem;
+        }
+
+        .hero {
+            padding: 100px 1.5rem 60px;
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .services,
+        .portfolio,
+        .why-choose,
+        .contact {
+            padding: 60px 1.5rem;
+        }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .gallery-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .features-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .contact-info {
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .cta-button {
+            padding: 0.875rem 2rem;
+            font-size: 1rem;
+        }
+
+        .service-card,
+        .gallery-item {
+            margin: 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero h1 {
+            font-size: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+        }
+
+        .gallery-overlay h3 {
+            font-size: 1rem;
+        }
+
+        .gallery-overlay p {
+            font-size: 0.85rem;
+        }
+    }
+</style>
+```
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <span>⚡</span>
+                <span>Legacy Communications</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+```
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Professional Network & Telecommunications Installation</h1>
+        <p>Expert cabling, network room setups, and telecommunications infrastructure for your business</p>
+        <a href="#contact" class="cta-button">Get a Free Quote</a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🔌</div>
+                <h3>Structured Cabling</h3>
+                <p>Professional installation of Cat5e, Cat6, Cat6a, and fiber optic cabling for data and voice networks. We ensure clean, organized cable runs that meet industry standards.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📡</div>
+                <h3>Network Room Installation</h3>
+                <p>Complete network room design and installation including rack mounting, patch panels, cable management, and equipment installation for optimal performance.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📞</div>
+                <h3>Telecommunications Setup</h3>
+                <p>Full telecommunications infrastructure including phone systems, PBX installation, and VoIP setup to keep your business connected.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🛠️</div>
+                <h3>Cable Management</h3>
+                <p>Professional cable organization, labeling, and management solutions to maintain clean and accessible network infrastructure.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>Network Testing & Certification</h3>
+                <p>Comprehensive testing and certification of all cable installations to ensure optimal performance and compliance with TIA/EIA standards.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Commercial & Industrial Wiring</h3>
+                <p>Large-scale network infrastructure installation for office buildings, warehouses, and industrial facilities of any size.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Gallery Section -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <h2 class="section-title">Our Work</h2>
+        <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 3rem;">Professional installations showcasing our expertise in network infrastructure and cable management</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="/mnt/user-data/uploads/IMG_3384.jpeg" alt="Professional rack cable management with organized red cables">
+                <div class="gallery-overlay">
+                    <h3>Rack Cable Management</h3>
+                    <p>Precision cable routing and organization</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="/mnt/user-data/uploads/IMG_2789.jpeg" alt="Network rack installation with overhead cable pathways">
+                <div class="gallery-overlay">
+                    <h3>Network Room Setup</h3>
+                    <p>Complete rack installation with structured cabling</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="/mnt/user-data/uploads/IMG_0096.jpeg" alt="Fiber optic fusion splicing work">
+                <div class="gallery-overlay">
+                    <h3>Fiber Optic Installation</h3>
+                    <p>Professional fiber splicing and termination</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="/mnt/user-data/uploads/IMG_6245.jpeg" alt="Legrand telephone input module installation">
+                <div class="gallery-overlay">
+                    <h3>Telecommunications Equipment</h3>
+                    <p>Expert installation of telecom modules</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="/mnt/user-data/uploads/IMG_1336.jpeg" alt="Residential network equipment installation">
+                <div class="gallery-overlay">
+                    <h3>Equipment Installation</h3>
+                    <p>Network equipment and cable routing</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="/mnt/user-data/uploads/IMG_1346.jpeg" alt="Network equipment on wooden shelf">
+                <div class="gallery-overlay">
+                    <h3>Residential Networking</h3>
+                    <p>Clean residential network setups</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="/mnt/user-data/uploads/IMG_2849.jpeg" alt="Under-desk cable management">
+                <div class="gallery-overlay">
+                    <h3>Cable Management Solutions</h3>
+                    <p>Professional cable organization systems</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="/mnt/user-data/uploads/IMG_3386.jpeg" alt="Empty network rack ready for equipment">
+                <div class="gallery-overlay">
+                    <h3>Rack Infrastructure</h3>
+                    <p>Professional rack mounting and preparation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section id="why-us" class="why-choose">
+    <div class="container">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">✓</div>
+                <h3>Certified Technicians</h3>
+                <p>All installers are certified and experienced professionals</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast Installation</h3>
+                <p>Efficient project completion with minimal disruption</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">💯</div>
+                <h3>Quality Guaranteed</h3>
+                <p>We stand behind our work with comprehensive warranties</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">📋</div>
+                <h3>Code Compliant</h3>
+                <p>All installations meet local codes and industry standards</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="contact-content">
+        <h2 class="section-title" style="color: white;">Get In Touch</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Ready to upgrade your network infrastructure? Contact us today for a free consultation and quote.</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-item-icon">📞</div>
+                <strong>Phone</strong>
+                <span>+1 (714) 791-6462</span>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-item-icon">✉️</div>
+                <strong>Email</strong>
+                <span>Steven.baeza84@gmail.com</span>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-item-icon">📍</div>
+                <strong>Service Area</strong>
+                <span>Nationwide Coverage</span>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem;">
+            <a href="#contact" class="cta-button">Request a Quote</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Legacy Communications. All rights reserved. | Professional Network & Telecommunications Installation</p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Smooth scrolling for all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+```
+
+</body>
+</html>
