@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,198 +7,201 @@
     <title>Legacy Communications | Professional Network Installation</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-bottom: 2px solid #d4af37;
-        }
-        
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-        
-        .logo-img {
-            height: 50px;
-            width: auto;
-        }
-        
-        .logo-text {
-            color: #d4af37;
-        }
-        
+
+```
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+    
+    header {
+        background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%);
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-bottom: 2px solid #d4af37;
+    }
+    
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    
+    .logo-img {
+        height: 50px;
+        width: auto;
+    }
+    
+    .logo-text {
+        color: #d4af37;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+    
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+        color: #d4af37;
+    }
+    
+    .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: #d4af37;
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+    
+    .hero {
+        background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%);
+        color: white;
+        padding: 150px 2rem 100px;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .cta-button {
+        background: #d4af37;
+        color: #0a1628;
+        padding: 1rem 2.5rem;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        display: inline-block;
+        transition: transform 0.3s;
+    }
+    
+    .cta-button:hover {
+        transform: translateY(-3px);
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        color: #0a1628;
+    }
+    
+    section {
+        padding: 80px 2rem;
+    }
+    
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    
+    .service-card {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 10px;
+        border-left: 4px solid #d4af37;
+    }
+    
+    .service-card h3 {
+        color: #0a1628;
+        margin: 1rem 0;
+        font-size: 1.3rem;
+    }
+    
+    .contact {
+        background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%);
+        color: white;
+        text-align: center;
+    }
+    
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+    }
+    
+    .contact-item {
+        text-align: center;
+    }
+    
+    .contact-item strong {
+        display: block;
+        color: #d4af37;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    footer {
+        background: #000;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    @media (max-width: 768px) {
+        .hero h1 { font-size: 2rem; }
+        .mobile-menu-toggle { display: block; }
         .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: #d4af37;
-        }
-        
-        .mobile-menu-toggle {
             display: none;
-            background: none;
-            border: none;
-            color: #d4af37;
-            font-size: 1.8rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-        
-        .hero {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
             background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%);
-            color: white;
-            padding: 150px 2rem 100px;
-            text-align: center;
+            flex-direction: column;
+            gap: 0;
+            padding: 1rem 0;
         }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-        }
-        
-        .cta-button {
-            background: #d4af37;
-            color: #0a1628;
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            display: inline-block;
-            transition: transform 0.3s;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #0a1628;
-        }
-        
-        section {
-            padding: 80px 2rem;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .service-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-            border-left: 4px solid #d4af37;
-        }
-        
-        .service-card h3 {
-            color: #0a1628;
-            margin: 1rem 0;
-            font-size: 1.3rem;
-        }
-        
-        .contact {
-            background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%);
-            color: white;
-            text-align: center;
-        }
-        
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        
-        .contact-item {
-            text-align: center;
-        }
-        
-        .contact-item strong {
+        .nav-links.active { display: flex; }
+        .nav-links a {
             display: block;
-            color: #d4af37;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-        
-        footer {
-            background: #000;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .mobile-menu-toggle { display: block; }
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%);
-                flex-direction: column;
-                gap: 0;
-                padding: 1rem 0;
-            }
-            .nav-links.active { display: flex; }
-            .nav-links a {
-                display: block;
-                padding: 1rem 2rem;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
-            }
-        }
-    </style>
+    }
+</style>
+```
+
 </head>
 <body>
     <header>
@@ -215,110 +219,121 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Professional Network & Telecommunications Installation</h1>
-            <p>Expert cabling, network room setups, and telecommunications infrastructure</p>
-            <a href="#contact" class="cta-button">Get a Free Quote</a>
+```
+<section class="hero">
+    <div class="container">
+        <h1>Professional Network & Telecommunications Installation</h1>
+        <p>Expert cabling, network room setups, and telecommunications infrastructure</p>
+        <a href="#contact" class="cta-button">Get a Free Quote</a>
+    </div>
+</section>
+
+<section style="padding: 80px 2rem; background: #f8f9fa;">
+    <div class="container" style="max-width: 1000px;">
+        <h2 class="section-title">Featured Project</h2>
+        <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczOdp94mdSkS-n1rsuUGTQLs5jxpCB8ynwAh8KrJutOalXXOgBvuculzUz9-o3LgdRNsce9_wY76ktKAXetV-y2U2d50lLizScKEIk3UoXXilgMyis6JjQxCpxZzxEMXQMLdp4Jv_5b5j0ovkvDAI8C0Xw=w2000" alt="Network Installation" style="width: 100%; border-radius: 10px; margin-bottom: 2rem;">
+            <h3 style="font-size: 2rem; color: #0a1628; margin-bottom: 1rem; text-align: center;">Professional Network Infrastructure</h3>
+            <p style="font-size: 1.15rem; color: #666; line-height: 1.9; text-align: center;">Complete network installation featuring structured cabling, professional cable management, and enterprise-grade equipment setup.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section style="padding: 80px 2rem; background: #f8f9fa;">
-        <div class="container" style="max-width: 1000px;">
-            <h2 class="section-title">Featured Project</h2>
-            <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
-                <img src="https://lh3.googleusercontent.com/pw/AP1GczOdp94mdSkS-n1rsuUGTQLs5jxpCB8ynwAh8KrJutOalXXOgBvuculzUz9-o3LgdRNsce9_wY76ktKAXetV-y2U2d50lLizScKEIk3UoXXilgMyis6JjQxCpxZzxEMXQMLdp4Jv_5b5j0ovkvDAI8C0Xw=w2000" alt="Network Installation" style="width: 100%; border-radius: 10px; margin-bottom: 2rem;">
-                <h3 style="font-size: 2rem; color: #0a1628; margin-bottom: 1rem; text-align: center;">Professional Network Infrastructure</h3>
-                <p style="font-size: 1.15rem; color: #666; line-height: 1.9; text-align: center;">Complete network installation featuring structured cabling, professional cable management, and enterprise-grade equipment setup.</p>
-            </div>
+<section id="portfolio" style="padding: 60px 2rem; background: white;">
+    <div class="container">
+        <h2 class="section-title">Our Work</h2>
+        <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 2rem;">Professional installations showcasing our expertise</p>
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <a href="https://photos.app.goo.gl/rxYwXa1uUq5gTefJ9" target="_blank" class="cta-button">📸 View Full Portfolio Gallery</a>
         </div>
-    </section>
-
-    <section id="portfolio" style="padding: 60px 2rem; background: white;">
-        <div class="container">
-            <h2 class="section-title">Our Work</h2>
-            <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 2rem;">Professional installations showcasing our expertise</p>
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <a href="https://photos.app.goo.gl/rxYwXa1uUq5gTefJ9" target="_blank" class="cta-button">📸 View Full Portfolio Gallery</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" style="padding: 80px 2rem; background: #f8f9fa;">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>🔌 Structured Cabling</h3>
-                    <p>Professional installation of Cat5e, Cat6, Cat6a, and fiber optic cabling.</p>
-                </div>
-                <div class="service-card">
-                    <h3>📡 Network Room Installation</h3>
-                    <p>Complete network room design including rack mounting and patch panels.</p>
-                </div>
-                <div class="service-card">
-                    <h3>📞 Telecommunications</h3>
-                    <p>Full telecommunications infrastructure including phone systems and VoIP.</p>
-                </div>
-                <div class="service-card">
-                    <h3>🛠️ Cable Management</h3>
-                    <p>Professional cable organization, labeling, and management solutions.</p>
-                </div>
-                <div class="service-card">
-                    <h3>🔍 Testing & Certification</h3>
-                    <p>Comprehensive testing ensuring compliance with TIA/EIA standards.</p>
-                </div>
-                <div class="service-card">
-                    <h3>🏢 Enterprise Solutions</h3>
-                    <p>Large-scale network infrastructure for commercial facilities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">Get In Touch</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Ready to upgrade your network infrastructure?</p>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <strong>📞 Phone</strong>
-                    <span>+1 (714) 791-6462</span>
-                </div>
-                <div class="contact-item">
-                    <strong>✉️ Email</strong>
-                    <span>admin@legacycommunications.us</span>
-                </div>
-                <div class="contact-item">
-                    <strong>📍 Service Area</strong>
-                    <span>Nationwide Coverage</span>
-                </div>
-            </div>
-            
-            <div style="margin-top: 3rem;">
-                <a href="mailto:admin@legacycommunications.us?subject=Network Installation Quote Request" class="cta-button">Request a Quote</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Legacy Communications | Professional Network & Telecommunications Installation</p>
-    </footer>
-
-    <script>
-        const toggle = document.querySelector('.mobile-menu-toggle');
-        const nav = document.querySelector('.nav-links');
         
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
+        <!-- Portfolio Image Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+            <div style="position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=500&fit=crop" alt="Network installation" style="width: 100%; height: 280px; object-fit: cover;">
+            </div>
+            <div style="position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=500&h=500&fit=crop" alt="Cable management" style="width: 100%; height: 280px; object-fit: cover;">
+            </div>
+            <div style="position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=500&h=500&fit=crop" alt="Fiber optics" style="width: 100%; height: 280px; object-fit: cover;">
+            </div>
+            <div style="position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1551703182-7b3d4e8c0e08?w=500&h=500&fit=crop" alt="Network equipment" style="width: 100%; height: 280px; object-fit: cover;">
+            </div>
+            <div style="position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=500&h=500&fit=crop" alt="Installation work" style="width: 100%; height: 280px; object-fit: cover;">
+            </div>
+            <div style="position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=500&fit=crop" alt="Network solutions" style="width: 100%; height: 280px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" style="padding: 80px 2rem; background: #f8f9fa;">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🔌 Structured Cabling</h3>
+                <p>Professional installation of Cat5e, Cat6, Cat6a, and fiber optic cabling.</p>
+            </div>
+            <div class="service-card">
+                <h3>📡 Network Room Installation</h3>
+                <p>Complete network room design including rack mounting and patch panels.</p>
+            </div>
+            <div class="service-card">
+                <h3>📞 Telecommunications</h3>
+                <p>Full telecommunications infrastructure including phone systems and VoIP.</p>
+            </div>
+            <div class="service-card">
+                <h3>🛠️ Cable Management</h3>
+                <p>Professional cable organization, labeling, and management solutions.</p>
+            </div>
+            <div class="service-card">
+                <h3>🔍 Testing & Certification</h3>
+                <p>Comprehensive testing ensuring compliance with TIA/EIA standards.</p>
+            </div>
+            <div class="service-card">
+                <h3>🏢 Enterprise Solutions</h3>
+                <p>Large-scale network infrastructure for commercial facilities.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title" style="color: white;">Get In Touch</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Ready to upgrade your network infrastructure?</p>
         
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-            });
-        });
-    </script>
-</body>
-</html>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong>📞 Phone</strong>
+                <span>+1 (714) 791-6462</span>
+            </div>
+            <div class="contact-item">
+                <strong>✉️ Email</strong>
+                <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e48580898d8aa488818385879d878b8989918a8d8785908d8b8a97ca9197">[email&#160;protected]</a></span>
+            </div>
+            <div class="contact-item">
+                <strong>📍 Service Area</strong>
+                <span>Nationwide Coverage</span>
+            </div>
+        </div>
+        
+        <div style="margin-top: 3rem;">
+            <a href="/cdn-cgi/l/email-protection#afcecbc2c6c1efc3cac8ceccd6ccc0c2c2dac1c6cccedbc6c0c1dc81dadc90dcdacdc5caccdb92e1cadbd8c0ddc48fe6c1dcdbcec3c3cedbc6c0c18ffedac0dbca8ffdcadedacadcdb" class="cta-button">Request a Quote</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Legacy Communications | Professional Network & Telecommunications Installation</p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.nav-links');
+```
