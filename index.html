@@ -316,7 +316,7 @@
             </div>
             <div class="contact-item">
                 <strong>✉️ Email</strong>
-                <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e48580898d8aa488818385879d878b8989918a8d8785908d8b8a97ca9197">[email&#160;protected]</a></span>
+                <span>admin@legacycommunications.us</span>
             </div>
             <div class="contact-item">
                 <strong>📍 Service Area</strong>
@@ -325,7 +325,7 @@
         </div>
         
         <div style="margin-top: 3rem;">
-            <a href="/cdn-cgi/l/email-protection#afcecbc2c6c1efc3cac8ceccd6ccc0c2c2dac1c6cccedbc6c0c1dc81dadc90dcdacdc5caccdb92e1cadbd8c0ddc48fe6c1dcdbcec3c3cedbc6c0c18ffedac0dbca8ffdcadedacadcdb" class="cta-button">Request a Quote</a>
+            <a href="mailto:admin@legacycommunications.us?subject=Network%20Installation%20Quote%20Request" class="cta-button">Request a Quote</a>
         </div>
     </div>
 </section>
@@ -334,7 +334,21 @@
     <p>&copy; 2024 Legacy Communications | Professional Network & Telecommunications Installation</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
     const toggle = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.nav-links');
-``
+    
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+    
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
+    });
+</script>
+```
+
+</body>
+</html>
